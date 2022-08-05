@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <!--main style sheet link-->
+    <link rel="stylesheet" href="style.css">
+        <!-- bootstrap cdn link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <section id="registration-form-section">
+        <div class="main-container">
+            <form action="submit" id="form" class="registration-form">
+                <!--doctor name-->
+                <label class="name" for="name">Name:</label>
+                <input class="input-filed"  placeholder=" example-Somnath halder" id="name-of-doctor" type="text" required>
+                <!--doctor qualification-->
+                <label class="qualification" for="qualification">Qualification:</label>
+                <input class="input-filed" placeholder=" MBBs " type="text" id="qualification-of-doctor" required >
+                <!--experience -->
+                <label for="experience">Experience:</label>
+                <input class="input-filed"  placeholder="4 years" id="experience-in-year" type="number" required>
+                <!--specialization -->
+                <label for="specialization ">Specialization:</label>
+                <input class="input-filed"  type="text" placeholder="Heart cerzari" id="specialization" required>
+                <!--doctor image-->
+                <label for="image">Image:</label>
+                <input class="input-filed"  type="file"  accept="image/png, image/jpeg" id="image" required>
+                <!--adhar number-->
+                <label for="adhar number">Adhar No:</label>
+                <input class="input-filed"  type="number" maxlength="12" min="12" placeholder="3242 6573 8782 0091" id="adhar" required >
+                <!-- Authorize certificate  -->
+                <label for="certificaate"> Authorize certificate no: </label>
+                <input class="input-filed"  type="number"  id="certificate-no" placeholder=" Arn00123451" required>
+                <!--appointment day ,time and fees -->
+                <label for="appointment-date">Appointment Day:</label>
+                <input  class="input-filed" placeholder="Monday" id="appointment-day" list="day" required>
+                <label for="appointemnt-time"> Appointment Time:</label>
+                <input class="input-filed"  placeholder= "10:00 am" type="time" id="appointment-time" required>
+                <label for="fees">Fees:</label>
+                <input class="input-filed"  type="number" id="fees" placeholder="100 RS" required>
+                <!--contact number-->
+                <label for="contact">Contact No:</label>
+                <input class="input-filed"  type="tel" placeholder="+91 9382015491" id="phone" required>
+                <!--Email detail-->
+                <label for="Email">E-mail:</label>
+                <input class="input-filed" id="email" placeholder="@example.gmail.com" type="email" required>
+                <!--submit button-->
+                <button type="submit" id="submit-btn">
+                    Submit
+                </button>
+            </form>
+            <!--data list of days-->
+            <datalist id="day">
+                  <option value="Monday"></option>
+                  <option value="Tuesday"></option>
+                  <option value="Wednesday"></option>
+                  <option value="Thursday"></option>
+                  <option value="Friday"></option>
+                  <option value="Saturday"></option>
+                  <option value="Sunday"></option>
+            </datalist>
+
+            <!--submit success pop up box-->
+
+        </div>
+        
+
+
+    </section>
+    <div class="pop-up " id="pop">
+        <p class="pop-up-text" > <span style="  text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: black;"> Thanks</span> for registration</p>
+       <button class="close-btn"> ok </button>
+    </div>
+   
+   <!-- javascript script  -->
+   <script src="script.js"></script>
+</body>
+</html>

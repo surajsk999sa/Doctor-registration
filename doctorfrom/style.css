@@ -1,0 +1,122 @@
+/*google font link*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --border-radius:0.4rem;
+    --primary-color:#F25C05;
+    --secondary-color:#2B2B2B;
+    --primary-font-size:clamp(0.8em,1.1vw,1.2rem);
+ 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(238, 238, 238);
+}
+/*registration form*/
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem 2.3rem;
+    border: 1px solid #ffffff;
+    box-shadow:  1px 1px 27px -2px rgb(186, 186, 186);
+    border-radius: var(--border-radius);
+}
+/*label text style*/
+label{
+    color: var(--secondary-color);
+    font-size:var(--primary-font-size) ;
+}
+/*input field style*/
+.input-filed{
+    padding: 0.3rem 0.2rem;
+    background-color: #fcf5f2;
+    margin-bottom: 1.3rem;
+    border:1px solid #FFF2EB;
+    border-radius: var(--border-radius);
+}
+.input-filed:hover{
+    border: 1px solid var(--primary-color);
+}
+#email{
+    margin-bottom: 2rem;
+}
+/*submit button*/
+#submit-btn{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: var(--primary-font-size);
+    padding: 0.7rem 0.6rem;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    margin: 1.3rem 0;
+}
+
+
+.pop-up{
+    background-color: #F25C05;
+    color: white;
+
+    width: 30%;
+  
+    padding: 2%;
+    font-size: 1.5rem;
+    border: 1px solid #F25C05;
+    border-radius: 4px;
+    height: 30vh;
+    position: absolute;
+    top: -150%;
+    left: 35%;
+    box-shadow: 0px 0px 41px 11px #aaa;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+/*media for form*/
+ @media (max-width:687px){
+    .registration-form{
+        width: 85%;
+
+    }
+    .pop-up{
+        width: 70%;
+        left: 15%;
+    }
+ }
+
+/*pop up box style*/
+
+
+
+.active{
+top: 22%;
+transition: all 500ms 10ms;
+}
+
+
+.close-btn{
+    background-color: transparent;
+    font-size: var(--primary-font-size);
+    color: black;
+    width: 30%;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: var(--border-radius);
+    padding: 0.3rem 1rem;
+    margin-top: 2rem;
+   cursor: pointer;
+}
+.pop-up-text{
+    font-weight: bold;
+    font-size: clamp(1.4em,2vw,2.4rem);
+    margin-top: clamp(1em,2.5vw,1.5rem);
+}
